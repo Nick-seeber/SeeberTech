@@ -1,0 +1,78 @@
+﻿@model IEnumerable<WebApplication1.Models.media_info>
+
+@{
+
+    ViewBag.Title = "Index";
+}
+<div class="col-md-12">
+    <div class="col-md-6">
+        <h2>Latest Movies Released For Download</h2>
+    
+        
+    </div>
+</div>
+
+<div class="container col-md-12">
+    
+    <table class="table">
+        <tr>
+            <th>
+                Download Link
+            </th>
+            <th>
+                Title
+            </th>
+            <th>
+                Summary
+            </th>
+            <th>
+                Rating
+            </th>
+            <th>
+                Year
+            </th>
+            <th>
+                Runtime
+            </th>
+
+
+
+            
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                
+                <td>
+                    @Html.ActionLink("DownloadMovie", "DownloadMovie", new { url = Html.DisplayFor(modelItem => item.url), name = Html.DisplayFor(modelItem => item.title)})
+                </td>
+                <td>
+                    <label>@Html.DisplayFor(modelItem => item.title)</label>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.summary)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.rating)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.year)
+                </td>
+                <td>
+                    @Html.DisplayFor(modeItem => item.runtime) min
+                </td>
+                <td>
+                    <img src="@Html.DisplayFor(modelItem => item.medium_cover_image)" />
+
+                </td>
+                <td>
+                    @*@Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.id })*@
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
