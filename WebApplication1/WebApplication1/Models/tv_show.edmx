@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="NicksTechtipsModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tv_shows">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="url" Type="nvarchar" MaxLength="4000" />
+          <Property Name="imdb_code" Type="nvarchar" MaxLength="4000" />
+          <Property Name="title" Type="nvarchar" MaxLength="4000" />
+          <Property Name="title_english" Type="nvarchar" MaxLength="4000" />
+          <Property Name="title_long" Type="nvarchar" MaxLength="4000" />
+          <Property Name="slug" Type="nvarchar" MaxLength="4000" />
+          <Property Name="year" Type="nvarchar" MaxLength="4000" />
+          <Property Name="rating" Type="nvarchar" MaxLength="4000" />
+          <Property Name="season" Type="nvarchar" MaxLength="4000" />
+          <Property Name="episode" Type="nvarchar" MaxLength="4000" />
+          <Property Name="runtime" Type="nvarchar" MaxLength="4000" />
+          <Property Name="summary" Type="nvarchar" MaxLength="4000" />
+          <Property Name="description_full" Type="nvarchar" MaxLength="4000" />
+          <Property Name="synopsis" Type="nvarchar" MaxLength="4000" />
+          <Property Name="yt_trailer_code" Type="nvarchar" MaxLength="4000" />
+          <Property Name="language" Type="nvarchar" MaxLength="4000" />
+          <Property Name="mpa_rating" Type="nvarchar" MaxLength="4000" />
+          <Property Name="background_image" Type="nvarchar" MaxLength="4000" />
+          <Property Name="small_cover_image" Type="nvarchar" MaxLength="4000" />
+          <Property Name="medium_cover_image" Type="nvarchar" MaxLength="4000" />
+          <Property Name="large_cover_image" Type="nvarchar" MaxLength="4000" />
+          <Property Name="state" Type="nvarchar" MaxLength="4000" />
+          <Property Name="torrents" Type="nvarchar" MaxLength="4000" />
+          <Property Name="date_uploaded" Type="nvarchar" MaxLength="4000" />
+          <Property Name="date_updated" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="NicksTechtipsModel1StoreContainer">
+          <EntitySet Name="tv_shows" EntityType="Self.tv_shows" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NicksTechtipsModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tv_shows">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="url" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="imdb_code" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="title" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="title_english" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="title_long" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="slug" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="year" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="rating" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="season" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="episode" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="runtime" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="summary" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="description_full" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="synopsis" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="yt_trailer_code" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="language" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="mpa_rating" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="background_image" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="small_cover_image" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="medium_cover_image" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="large_cover_image" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="state" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="torrents" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="date_uploaded" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="date_updated" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="NicksTechtipsTvShows" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tv_shows" EntityType="Self.tv_shows" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NicksTechtipsModel1StoreContainer" CdmEntityContainer="NicksTechtipsTvShows">
+          <EntitySetMapping Name="tv_shows">
+            <EntityTypeMapping TypeName="NicksTechtipsModel1.tv_shows">
+              <MappingFragment StoreEntitySet="tv_shows">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="url" ColumnName="url" />
+                <ScalarProperty Name="imdb_code" ColumnName="imdb_code" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="title_english" ColumnName="title_english" />
+                <ScalarProperty Name="title_long" ColumnName="title_long" />
+                <ScalarProperty Name="slug" ColumnName="slug" />
+                <ScalarProperty Name="year" ColumnName="year" />
+                <ScalarProperty Name="rating" ColumnName="rating" />
+                <ScalarProperty Name="season" ColumnName="season" />
+                <ScalarProperty Name="episode" ColumnName="episode" />
+                <ScalarProperty Name="runtime" ColumnName="runtime" />
+                <ScalarProperty Name="summary" ColumnName="summary" />
+                <ScalarProperty Name="description_full" ColumnName="description_full" />
+                <ScalarProperty Name="synopsis" ColumnName="synopsis" />
+                <ScalarProperty Name="yt_trailer_code" ColumnName="yt_trailer_code" />
+                <ScalarProperty Name="language" ColumnName="language" />
+                <ScalarProperty Name="mpa_rating" ColumnName="mpa_rating" />
+                <ScalarProperty Name="background_image" ColumnName="background_image" />
+                <ScalarProperty Name="small_cover_image" ColumnName="small_cover_image" />
+                <ScalarProperty Name="medium_cover_image" ColumnName="medium_cover_image" />
+                <ScalarProperty Name="large_cover_image" ColumnName="large_cover_image" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="torrents" ColumnName="torrents" />
+                <ScalarProperty Name="date_uploaded" ColumnName="date_uploaded" />
+                <ScalarProperty Name="date_updated" ColumnName="date_updated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
